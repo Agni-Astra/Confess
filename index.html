@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            margin: 10px;
+            padding: 10px;
+            border: 20px solid black;
+        }
+    </style>
+</head>
+<body onload="checkPassword()">  <!-- This triggers the password prompt when the page loads -->
+    <h3>
+        Hi Ishika,
+    </h3>
+    <p>
+        The reason I am writing this is because I want to tell you that I really ❤️❤️ love you ❤️❤️. I know that you
+        already have a boyfriend, but I need to tell you that I love you more than you could ever know. I am so happy that I met you in my life. <strong>I am telling you this because I don’t want to regret never telling you, even years from now.</strong>
+    </p>
 
+    <p>
+        Also, I never <strong>want</strong> to disturb you, and I promise I’ll never disturb you again. 🙏
+    </p>
+
+    <p>
+        I am truly sorry, but I cannot tell you who I am, because I don’t want you to feel uncomfortable about this. 😔
+    </p>
+
+    <p><strong>One last thing,</strong> the number you received this message from is not mine, so please don’t message or call my friend. 🚫📞</p>
+    
+    <p>If you want to talk to me and still want to know who I am, wear the same dress you wore at Ralamandal (By the way, you looked like an angel in that dress 😊😊). I will contact you afterward. 👗👼</p>
+
+    <h4>This is not a love letter; I am just confessing my feelings. I’m sorry again if I’ve done anything wrong. 🙏</h4>
+    
+    <br><br>
+    
+    <h4>Sorry once again, and I promise I will never disturb you. 🙏</h4>
+    
+    <br><br><br><br><br><br>
+    
+    <center>If you've read this far, it means you really care about someone’s feelings. ❤️</center>
+    
+    <h1>Thank you 😊</h1>
+
+    <script>
+        function checkPassword() {
+            const pass = 'ishika';
+            let attempts = 0;
+            const maxAttempts = 10;
+
+            let password = prompt('Enter Password To View Page:', 'Hint: Your name in small letters, "princess hedav"');
+            if (pass === password) {
+                alert('Correct password, click OK to enter.');
+            } else {
+                attempts++;
+                if (attempts >= maxAttempts) {
+                    alert(`Too many failed attempts. Redirecting... ${attempts + '/' + maxAttempts}`);
+                    window.location.href = 'https://www.google.com';  // Redirect on failure
+                } else {
+                    alert('Incorrect password. Try again.');
+                    checkPassword();  // Retry
+                }
+            }
+        }
+    </script>
+</body>
+</html>
